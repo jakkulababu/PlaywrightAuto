@@ -9,7 +9,7 @@ test.only("Login into Client portal and validate Home content", async ({
   //Test Data
   const username = "jakkulababu@gmail.com";
   const password = "Babu@12345";
-  const homeText = "HOME";
+  const homeText = "HOMETEST";
   const orders = "ORDERS";
   loginPage.goTo();
   loginPage.validLogin(username, password);
