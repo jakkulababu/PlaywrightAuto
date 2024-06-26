@@ -7,8 +7,8 @@ test.only("Login into Client portal and validate Home content", async ({
   const loginPage = new LoginPage(page);
 
   //Test Data
-  const username = "anshika@gmail.com";
-  const password = "Iamking@000";
+  const username = "jakkulababu@gmail.com";
+  const password = "Babu@12345";
   const homeText = "HOME";
   const orders = "ORDERS";
   loginPage.goTo();
