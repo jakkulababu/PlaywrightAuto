@@ -4,10 +4,10 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- main
+  - main  # Adjust branch as per your setup
 
 pool:
-  vmImage: windows-latest
+  vmImage: 'windows-latest'
 
 steps:
 - task: NodeTool@0
@@ -17,7 +17,10 @@ steps:
 
 - script: |
     npm install
-    npm run build
-    npx playwright test
-  displayName: 'Run Automation Test - QA'
+    npm run build  # If you have a build step
+  displayName: 'Install and Build'
+
+- script: |
+    npm run test  # Command to run your Playwright tests
+  displayName: 'Run Tests'
  
